@@ -6,5 +6,11 @@ use Illuminate\Http\Request;
 
 class FeatureController extends Controller
 {
-    public 
+    public function index()
+    {
+        $features = Features::all();
+        return view('features.index')->with([
+                    'Features' => $features
+                   ]);
+    }
 }
