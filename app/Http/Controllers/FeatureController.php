@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\features;
+use resources\views;
 
 class FeatureController extends Controller
 {
     public function index()
     {
-        $features = Features::all();
-        return view('features.index')->with([
-                    'Features' => $features
+        $features = features::all();
+        return view('features')->with([
+                    'features' => $features
                    ]);
     }
 }
