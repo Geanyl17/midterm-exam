@@ -7,23 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+<h1> Laravel Features</h1>
 <table>
-    <h1> Laravel Features</h1>
+</thead>
     <tr>
-        <th>Company</th>
-        <th>Contact</th>
-        <th>Country</th>
+        <th>ID</th>
+        <th>Features</th>
+        <th>Description</th>
     </tr>
+</thead>
+ <tbody>
+    @foreach($categories as $category)
     <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
-        <td>Germany</td>
+        <td>{{ $feature->id }}</td>
+        <td>{{ $feature->name }}</td>
+        <td>{{ $feature->desc }}</td>
     </tr>
-    <tr>
-        <td>Centro comercial Moctezuma</td>
-        <td>Francisco Chang</td>
-        <td>Mexico</td>
-    </tr>
+    @endforeach
+</tbody>
     </table>
 </body>
 </html>
